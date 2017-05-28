@@ -131,7 +131,7 @@ ul{
 
 // Skills
 .skill-bar{
-	width: 50%;
+	width: 50%; float: left;
 	.skill{
 		float:left; background: $d_black; width: 100%; height: 40px; margin: 0px 0px 15px; position: relative; //transform :rotate(-90deg) translate(-140px);
 		.progress-bar{
@@ -157,7 +157,19 @@ ul{
 		background: #DD1B16;
 	}
 }
-
+.skill-img{
+	position: relative; width: 50%; float: left; 
+	img{
+	  max-width: 100px;
+	  height: auto;
+	  position: absolute;
+	}
+}
+.quote{
+	span{
+		font-family: $font_1; @include font-size(48); color: $theme_blue; vertical-align: middle;
+	}
+}
 // hire
 .download-resume{
 	@include font-size(28); text-align: center; margin: 0 auto; display: block; max-width: 380px; transform: translateY(100%);
@@ -242,6 +254,11 @@ footer{
 	 		.skill-name{
 	 			@include font-size(12);
 	 		}
+		}
+	}
+	.quote{
+		span{
+			@include font-size(24); display: block;
 		}
 	} 
 	.download-resume{

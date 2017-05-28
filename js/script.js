@@ -14,7 +14,13 @@ $(document).ready(function(){
 	call_fullPage()
 	myFunction();
 
-	// loader
+	$(window).resize(function(){
+		call_fullPage()
+	})
+
+}); //Jquery
+
+// loader
 	function myFunction() {
 		setTimeout(showPage, 3000);
 	}
@@ -39,12 +45,6 @@ $(document).ready(function(){
 				// navigationTooltips: ['First page', 'Second page', 'Third and last page']
 				
 				// responsiveWidth: 100%
-			});
-			
+			});		
 		}
 	}
-
-	$(window).resize(function(){
-		call_fullPage()
-	})
-}); //Jquery
