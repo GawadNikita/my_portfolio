@@ -24,43 +24,39 @@ a{
 }
 ul{
 	list-style-type: none;
-	li{
-		
-	}
 }
 
 // Page styling
-.page-wrapper{
-	position: relative; padding: 20px 40px; 
-	&:before{
-		content: "<body>";
-	}
-	&:after{
-		content: "</body>";
-	}
-}
+// .page-wrapper{
+// 	position: relative; padding: 20px 40px; 
+// 	&:before{
+// 		content: "<body>";
+// 	}
+// 	&:after{
+// 		content: "</body>";
+// 	}
+// }
+
+
+// Styling for sections
 .section-wrapper{ 
 	padding: 0px 0px;
 	.section{
-		background-color: transparent; width: 100%; padding: 15px 0px;
+		background-color: transparent; width: 100%; padding: 30px 0px; position: relative;
 		.content{
-			padding: 0px 50px;
+			padding: 0px 80px; 
 		}
 	}
 }
-
-
 .pseudo-class{
 	&:before, &:after{
 		display: block; font-size: 22px; font-family: $font_title1;  color: #515152; letter-spacing: 4px; font-weight: bold;
 	}
 }
-
-/* slide_1*/
 .section-title{
 	margin: 0px 0px 30px; @include font-size(45); font-family: $font_3; position: relative; color: $theme_blue;
 	span{
-		padding: 8px 20px; display: inline-block; letter-spacing: 4px; text-transform: uppercase; 
+		padding: 0px 30px; display: inline-block; letter-spacing: 4px; text-transform: uppercase; 
 	}
 	&:before{
 		 content: "<title>";
@@ -69,16 +65,21 @@ ul{
 		 content: "</title>";
 	} 
 }
+
+// About me
 .about{
 	p{
 		@include font-size(16); margin-bottom: 15px;
 	}
 	.name{
-		font-family: $font_title1; @include font-size(48); color: $theme_blue;
+		line-height: 1; margin-bottom: 45px;
+		span{
+			font-family: $font_1; @include font-size(48); color: $theme_blue; vertical-align: middle; line-height: 0.8;
+		}
+		.dev{
+			font-family: $font_content; display: block; letter-spacing: 5px; @include font-size(12); color: $white; line-height: 1;
+		}
 	} 
-	.dev{
-		font-family: $font_title2; display: block; letter-spacing: 3px; @include font-size(12);
-	}
 }
 .about-me{
 	&:before, &:after{
@@ -101,21 +102,28 @@ ul{
 
 
 // experience
-.experience{
+.experience-wrapper{
 	ul{
-		padding: 0; margin: 0; display: flex; flex-wrap: wrap; justify-content: space-around;
+		padding: 0; margin: 0 -5px; display: flex; flex-wrap: wrap; align-items: stretch;
 		li{
-			padding: 20px 10px; background: rgba(255,255,255,0.2); 
+			padding: 25px; background: $d_black; width: 32%; margin: 15px 5px;
 		}
 		p{
-			line-height: 0.8; font-size: 16px;
+			line-height: 1; font-size: 16px;
 		}
 		
 		.job-title{
-			@include font-size(24); margin-bottom: 25px;
+			@include font-size(24); font-family: $font_1;color: $theme_blue; letter-spacing: 3px; font-weight: 800; position: relative; display: inline;
+			&:after{
+				content: ""; position: absolute; width: 80px; height: 1px; background: $theme_blue; bottom: 5px; right: -20px;
+			}
 		}
 		.company{
-			@include font-size(14); font-style: italic; font-family: $font_content; color: $theme_blue;
+			 margin-top: 25px;
+			@include font-size(14); font-family: $font_content; line-height: 1.2;
+		}
+		.experience{
+			color: $d_grey;@include font-size(12);
 		}
 	}
 }
@@ -125,7 +133,7 @@ ul{
 .skill-bar{
 	width: 50%;
 	.skill{
-		float:left; background: $d_grey; width: 100%; height: 40px; margin: 0px 0px 15px; position: relative; //transform :rotate(-90deg) translate(-140px);
+		float:left; background: $d_black; width: 100%; height: 40px; margin: 0px 0px 15px; position: relative; //transform :rotate(-90deg) translate(-140px);
 		.progress-bar{
 			height: inherit; width: inherit; display: block; background: $theme_blue; padding: 0px 10px; line-height: 40px;
 		}
@@ -194,9 +202,24 @@ footer{
 }
 
 @media screen and (max-width: 991px){
-	.experience ul li{
-		width: 100%; margin-bottom: 15px;
-	}
+	.section-wrapper{		
+		.section{
+			.content{
+				padding: 0px 20px;
+			}
+		}
+	} 
+	.experience-wrapper{
+		ul{	
+			margin: 0px;	
+			li{
+				width: 100%; margin: 0px 0px 15px;
+			}
+			.job-title{
+				@include font-size(23);
+			}
+		}
+	} 
 	.skill-bar{
 		width: 100%;
 	}
@@ -212,12 +235,12 @@ footer{
 		}
 	}
 	.section-title{
-		@include font-size(30);
+		@include font-size(28);
 	}
 	.skill-bar{		
 		.skill{
 	 		.skill-name{
-	 			@include font-size(16);
+	 			@include font-size(12);
 	 		}
 		}
 	} 
