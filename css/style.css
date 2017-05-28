@@ -1,0 +1,432 @@
+/* Color codes */
+@import url("https://fonts.googleapis.com/css?family=Pavanam|Raleway+Dots|Tangerine");
+@import url("https://fonts.googleapis.com/css?family=Allura|Limelight|Nixie+One");
+/* line 1, ../scss/_form.scss */
+.btn-default {
+  padding: 8px 12px;
+  background: #fff;
+  text-decoration: none;
+  outline: none;
+  color: #000;
+  font-size: 0.85714rem;
+}
+
+/* line 9, ../scss/_form.scss */
+.btn-blue {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+/* line 20, ../scss/_form.scss */
+.btn-blue:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+/* line 40, ../scss/_form.scss */
+.btn-blue:hover {
+  color: #fff;
+}
+/* line 42, ../scss/_form.scss */
+.btn-blue:hover:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+
+/* line 1, ../scss/_common.scss */
+html, body {
+  height: 100%;
+  position: relative;
+  font-family: "Nixie One", cursive;
+  line-height: 1.2;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background: #252627;
+}
+
+/* line 4, ../scss/_common.scss */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+/* line 12, ../scss/_common.scss */
+.clearfix {
+  display: inline-block;
+}
+
+/* start commented backslash hack \*/
+/* line 14, ../scss/_common.scss */
+* html .clearfix {
+  height: 1%;
+}
+
+/* line 15, ../scss/_common.scss */
+.clearfix {
+  display: block;
+}
+
+/* close commented backslash hack */
+/* line 18, ../scss/_common.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 19, ../scss/_common.scss */
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  margin: 0px 0px 8px;
+}
+
+/* line 22, ../scss/_common.scss */
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+/* line 25, ../scss/_common.scss */
+ul {
+  list-style-type: none;
+}
+
+/* line 33, ../scss/_common.scss */
+.page-wrapper {
+  position: relative;
+  padding: 20px 40px;
+}
+/* line 35, ../scss/_common.scss */
+.page-wrapper:before {
+  content: "<body>";
+}
+/* line 38, ../scss/_common.scss */
+.page-wrapper:after {
+  content: "</body>";
+}
+
+/* line 42, ../scss/_common.scss */
+.section-wrapper {
+  padding: 0px 0px;
+}
+/* line 44, ../scss/_common.scss */
+.section-wrapper .section {
+  background-color: transparent;
+  width: 100%;
+  padding: 15px 0px;
+}
+/* line 46, ../scss/_common.scss */
+.section-wrapper .section .content {
+  padding: 0px 50px;
+}
+
+/* line 54, ../scss/_common.scss */
+.pseudo-class:before, .pseudo-class:after {
+  display: block;
+  font-size: 22px;
+  font-family: "Tangerine", cursive;
+  color: #515152;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+/* slide_1*/
+/* line 60, ../scss/_common.scss */
+.section-title {
+  margin: 0px 0px 30px;
+  font-size: 3.21429rem;
+  font-family: "Limelight", cursive;
+  position: relative;
+  color: #1ce5ff;
+}
+/* line 62, ../scss/_common.scss */
+.section-title span {
+  padding: 8px 20px;
+  display: inline-block;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+/* line 65, ../scss/_common.scss */
+.section-title:before {
+  content: "<title>";
+}
+/* line 68, ../scss/_common.scss */
+.section-title:after {
+  content: "</title>";
+}
+
+/* line 73, ../scss/_common.scss */
+.about p {
+  font-size: 1.14286rem;
+  margin-bottom: 15px;
+}
+/* line 76, ../scss/_common.scss */
+.about .name {
+  font-family: "Tangerine", cursive;
+  font-size: 3.42857rem;
+  color: #1ce5ff;
+}
+/* line 79, ../scss/_common.scss */
+.about .dev {
+  font-family: "Raleway Dots", cursive;
+  display: block;
+  letter-spacing: 3px;
+  font-size: 0.85714rem;
+}
+
+/* line 84, ../scss/_common.scss */
+.about-me:before, .about-me:after {
+  margin: 10px 0px;
+  font-size: 32px;
+  font-family: "Raleway Dots", cursive;
+  position: relative;
+  color: #00bcd4;
+}
+/* line 91, ../scss/_common.scss */
+.about-me:before {
+  content: '<about me>';
+}
+/* line 94, ../scss/_common.scss */
+.about-me:after {
+  content: '</about me>';
+}
+/* line 97, ../scss/_common.scss */
+.about-me p {
+  padding-left: 5%;
+}
+
+/* line 105, ../scss/_common.scss */
+.experience ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+/* line 107, ../scss/_common.scss */
+.experience ul li {
+  padding: 20px 10px;
+  background: rgba(255, 255, 255, 0.2);
+}
+/* line 110, ../scss/_common.scss */
+.experience ul p {
+  line-height: 0.8;
+  font-size: 16px;
+}
+/* line 114, ../scss/_common.scss */
+.experience ul .job-title {
+  font-size: 1.71429rem;
+  margin-bottom: 25px;
+}
+/* line 117, ../scss/_common.scss */
+.experience ul .company {
+  font-size: 1rem;
+  font-style: italic;
+  font-family: "Nixie One", cursive;
+  color: #1ce5ff;
+}
+
+/* line 125, ../scss/_common.scss */
+.skill-bar {
+  width: 50%;
+}
+/* line 127, ../scss/_common.scss */
+.skill-bar .skill {
+  float: left;
+  background: #232B2B;
+  width: 100%;
+  height: 40px;
+  margin: 0px 0px 15px;
+  position: relative;
+}
+/* line 129, ../scss/_common.scss */
+.skill-bar .skill .progress-bar {
+  height: inherit;
+  width: inherit;
+  display: block;
+  background: #1ce5ff;
+  padding: 0px 10px;
+  line-height: 40px;
+}
+/* line 132, ../scss/_common.scss */
+.skill-bar .skill .skill-name {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  padding: 0px 10px;
+  letter-spacing: 3px;
+  font-size: 1.57143rem;
+}
+/* line 135, ../scss/_common.scss */
+.skill-bar .skill .skill-value {
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 40px;
+  padding: 0px 10px;
+}
+/* line 139, ../scss/_common.scss */
+.skill-bar #skill-html {
+  background: #E34C26;
+}
+/* line 142, ../scss/_common.scss */
+.skill-bar #skill-css {
+  background: #007DC6;
+}
+/* line 145, ../scss/_common.scss */
+.skill-bar #skill-js {
+  background: #D6BA33;
+}
+/* line 148, ../scss/_common.scss */
+.skill-bar #skill-ng {
+  background: #DD1B16;
+}
+
+/* line 154, ../scss/_common.scss */
+.download-resume {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  max-width: 380px;
+  transform: translateY(100%);
+}
+
+/* line 157, ../scss/_common.scss */
+footer {
+  margin: 15px 0px;
+  text-align: center;
+  padding: 20px 0px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* line 159, ../scss/_common.scss */
+footer .social-links {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 161, ../scss/_common.scss */
+footer .social-links a {
+  margin: 0px 15px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+/* line 163, ../scss/_common.scss */
+footer .social-links a:before {
+  font-size: 2.14286rem;
+}
+/* line 166, ../scss/_common.scss */
+footer .social-links a:hover {
+  color: #1ce5ff;
+}
+/* line 171, ../scss/_common.scss */
+footer .shadow {
+  box-shadow: 0px -5px 6px -4px #00bcd4;
+  display: block;
+  max-width: 350px;
+  margin: 0px auto 0px;
+  position: relative;
+  z-index: 2;
+  background: #000;
+  min-height: 20px;
+}
+
+/* line 183, ../scss/_common.scss */
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  background: #1ce5ff;
+}
+
+/* Media Query */
+@media screen and (min-width: 1024px) {
+  /* line 188, ../scss/_common.scss */
+  .center-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 991px) {
+  /* line 197, ../scss/_common.scss */
+  .experience ul li {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  /* line 200, ../scss/_common.scss */
+  .skill-bar {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 414px) {
+  /* line 206, ../scss/_common.scss */
+  #fp-nav {
+    bottom: 0;
+    right: 0 !important;
+    left: 0;
+    top: auto;
+    background: #252627;
+    text-align: center;
+  }
+  /* line 209, ../scss/_common.scss */
+  #fp-nav ul li {
+    display: inline-block;
+  }
+
+  /* line 214, ../scss/_common.scss */
+  .section-title {
+    font-size: 2.14286rem;
+  }
+
+  /* line 219, ../scss/_common.scss */
+  .skill-bar .skill .skill-name {
+    font-size: 1.14286rem;
+  }
+
+  /* line 224, ../scss/_common.scss */
+  .download-resume {
+    font-size: 1.28571rem;
+  }
+
+  /* line 229, ../scss/_common.scss */
+  footer .social-links a {
+    margin: 0px 8px;
+  }
+  /* line 231, ../scss/_common.scss */
+  footer .social-links a:before {
+    font-size: 1.57143rem;
+  }
+}

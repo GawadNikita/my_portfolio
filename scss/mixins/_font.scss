@@ -1,0 +1,9 @@
+@mixin font-size($sizeValue) {
+  @if($sizeValue == 'inherit'){
+  	// do nothing
+  }
+  @else{
+  	// font-size: remify(sizeValue);
+ 		font-size: ($sizeValue / 14) + rem;
+  }
+}
