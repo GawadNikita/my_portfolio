@@ -106,7 +106,7 @@ ul{
 	ul{
 		padding: 0; margin: 0 -5px; display: flex; flex-wrap: wrap; align-items: stretch;
 		li{
-			padding: 25px; background: $d_black; width: 32%; margin: 15px 5px;
+			padding: 25px; background: $d_black; width: 49%; margin: 15px 5px;
 		}
 		p{
 			line-height: 1; font-size: 16px;
@@ -131,9 +131,8 @@ ul{
 
 // Skills
 .skill-bar{
-	width: 50%; float: left;
 	.skill{
-		float:left; background: $d_black; width: 100%; height: 40px; margin: 0px 0px 15px; position: relative; //transform :rotate(-90deg) translate(-140px);
+		background: $d_black; width: 100%; height: 40px; margin: 0px 0px 15px; position: relative; //transform :rotate(-90deg) translate(-140px);
 		.progress-bar{
 			height: inherit; width: inherit; display: block; background: $theme_blue; padding: 0px 10px; line-height: 40px;
 		}
@@ -145,16 +144,23 @@ ul{
 		}
 	}
 	#skill-html{
-			background: #E34C26;
+			background: #de4b25;
 	}
 	#skill-css{
-		background: #007DC6;
+		background: #146fb1;
 	}
 	#skill-js{
-		background: #D6BA33;
+		background: #e3c431;
+		&~.skill-name{ color: #000;}
+	}
+	#skill-jquery{
+		background: #1169ae;
 	}
 	#skill-ng{
-		background: #DD1B16;
+		background: #dd0031;
+	}
+	#skill-ng2{
+		background: #c3002f;
 	}
 }
 .skill-img{
@@ -172,12 +178,12 @@ ul{
 }
 // hire
 .download-resume{
-	@include font-size(28); text-align: center; margin: 0 auto; display: block; max-width: 380px; transform: translateY(100%);
+	@include font-size(28); text-align: center; margin: 35px auto 20px; display: block; max-width: 380px;
 }
 footer{
 	margin: 15px 0px; text-align: center; padding: 20px 0px; position: absolute; bottom: 0; left: 0; right: 0;
 	.social-links{
-		max-width: 400px; margin: 0 auto; text-align: center;
+		max-width: 450px; margin: 0 auto; text-align: center;
 		a{
 			 margin: 0px 15px; color: $white; position: relative; z-index: 1;
 			&:before{
@@ -217,7 +223,7 @@ footer{
 	.section-wrapper{		
 		.section{
 			.content{
-				padding: 0px 20px;
+				padding: 0px 60px;
 			}
 		}
 	} 
@@ -262,7 +268,7 @@ footer{
 		}
 	} 
 	.download-resume{
-		@include font-size(18);
+		@include font-size(18); margin-bottom: 100px;
 	}
 	footer{
 		.social-links{
