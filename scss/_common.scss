@@ -271,6 +271,7 @@ footer{
 		@include font-size(13); margin-bottom: 100px;
 	}
 	footer{
+		position: relative; bottom: unset; left: unset; right: unset;
 		.social-links{
 			a{			
 				margin: 0px 8px;
