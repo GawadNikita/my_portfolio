@@ -223,7 +223,7 @@ footer{
 	.section-wrapper{		
 		.section{
 			.content{
-				padding: 0px 60px;
+				padding: 0px 25px;
 			}
 		}
 	} 
@@ -253,7 +253,7 @@ footer{
 		}
 	}
 	.section-title{
-		@include font-size(28);
+		@include font-size(20);
 	}
 	.skill-bar{		
 		.skill{
@@ -268,7 +268,7 @@ footer{
 		}
 	} 
 	.download-resume{
-		@include font-size(18); margin-bottom: 100px;
+		@include font-size(13); margin-bottom: 100px;
 	}
 	footer{
 		.social-links{
