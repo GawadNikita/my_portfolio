@@ -26,18 +26,6 @@ ul{
 	list-style-type: none;
 }
 
-// Page styling
-// .page-wrapper{
-// 	position: relative; padding: 20px 40px; 
-// 	&:before{
-// 		content: "<body>";
-// 	}
-// 	&:after{
-// 		content: "</body>";
-// 	}
-// }
-
-
 // Styling for sections
 .section-wrapper{ 
 	padding: 0px 0px;
@@ -104,9 +92,10 @@ ul{
 // experience
 .experience-wrapper{
 	ul{
-		padding: 0; margin: 0 -5px; display: flex; flex-wrap: wrap; align-items: stretch;
+		padding: 0;
 		li{
-			padding: 25px; background: $d_black; width: 49%; margin: 15px 5px;
+			margin-bottom: 20px;
+			.experience-content-wrapper{background: $d_black; padding: 20px 15px; height: 100%;}
 		}
 		p{
 			line-height: 1; font-size: 16px;
@@ -215,10 +204,6 @@ footer{
 		max-width: 900px; margin: 0 auto;
 	}
 }
-@media screen and (max-width: 1024){
-
-}
-
 @media screen and (max-width: 991px){
 	.section-wrapper{		
 		.section{
@@ -229,10 +214,6 @@ footer{
 	} 
 	.experience-wrapper{
 		ul{	
-			margin: 0px;	
-			li{
-				width: 100%; margin: 0px 0px 15px;
-			}
 			.job-title{
 				@include font-size(23);
 			}
