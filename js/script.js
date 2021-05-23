@@ -8,15 +8,10 @@ $(document).ready(function(){
 			'width' : skill_val
 		});
 		$(this).find('.skill-value').html((parseInt(skill_val)/10) + " / 10")
-		console.log("skill : ", skill_val);
 	})
 
 	call_fullPage()
 	myFunction();
-
-	$(window).resize(function(){
-		call_fullPage()
-	})
 
 }); //Jquery
 
@@ -34,17 +29,12 @@ $(document).ready(function(){
 		if( win_width >= 768){
 			$('#fullpage').fullpage({
 				anchors: ['about_me', 'experience', 'skills', 'hire_me'],
-				// sectionsColor: ['#DAC500', '#1BBC9B', '#7E8F7C'],
 				menu: '#menu',
 				navigation: true,
 				navigationPosition: 'right',
 				verticalCentered: false,
 				scrollOverflow: true,
 				scrollOverflowReset: true
-				// fixedElements: '#footer"
-				// navigationTooltips: ['First page', 'Second page', 'Third and last page']
-				
-				// responsiveWidth: 100%
 			});		
 		}
 	}
