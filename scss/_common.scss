@@ -321,7 +321,7 @@ footer {
 @media screen and (max-width: 991px) {
 	html, body{
 		overflow: auto;
-		-webkit-overflow-scrolling: auto !important;
+		-webkit-overflow-scrolling: touch !important;
 	}
   .section-wrapper {
     .section {
