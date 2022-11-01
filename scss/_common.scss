@@ -1,15 +1,4 @@
-html,
-body {
-  height: 100%;
-  position: relative;
-  font-family: $font_content;
-  line-height: 1.2;
-  @include font-size(14);
-  margin: 0;
-  padding: 0;
-  color: $white;
-  background: #252627;
-}
+html,body{ height: 100%; position: relative; font-family: $font_content; line-height: 1.2; @include font-size(14); margin: 0; padding: 0; color: $white; background: #252627;}
 
 // Style for content
 .clearfix:after {
@@ -20,283 +9,182 @@ body {
   clear: both;
   height: 0;
 }
-.clearfix {
-  display: inline-block;
-}
+.clearfix { display: inline-block; }
 /* start commented backslash hack \*/
-* html .clearfix {
-  height: 1%;
-}
-.clearfix {
-  display: block;
-}
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
 /* close commented backslash hack */
 
-* {
-  box-sizing: border-box;
+*{ box-sizing: border-box;}
+p{
+	font-size: 16px; line-height: 1.5; letter-spacing: 1.5px; margin: 0px 0px 8px;
 }
-p {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 1.5px;
-  margin: 0px 0px 8px;
+a{
+	text-decoration: none; outline: none;
 }
-a {
-  text-decoration: none;
-  outline: none;
-}
-ul {
-  list-style-type: none;
+ul{
+	list-style-type: none;
 }
 
 // Styling for sections
-.section-wrapper {
-  padding: 0px 0px;
-  .section {
-    background-color: transparent;
-    width: 100%;
-    padding: 30px 0px;
-    position: relative;
-    .content {
-      padding: 0px 80px;
-    }
-  }
+.section-wrapper{ 
+	padding: 0px 0px;
+	.section{
+		background-color: transparent; width: 100%; padding: 30px 0px; position: relative;
+		.content{
+			padding: 0px 80px; 
+		}
+	}
 }
-.pseudo-class {
-  &:before,
-  &:after {
-    display: block;
-    font-size: 22px;
-    font-family: $font_title1;
-    color: #515152;
-    letter-spacing: 4px;
-    font-weight: bold;
-  }
+.pseudo-class{
+	&:before, &:after{
+		display: block; font-size: 22px; font-family: $font_title1;  color: #515152; letter-spacing: 4px; font-weight: bold;
+	}
 }
-.section-title {
-  margin: 0px 0px 30px;
-  @include font-size(45);
-  font-family: $font_3;
-  position: relative;
-  color: $theme_blue;
-  span {
-    padding: 0px 30px;
-    display: inline-block;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-  }
-  &:before {
-    content: "<title>";
-  }
-  &:after {
-    content: "</title>";
-  }
+.section-title{
+	margin: 0px 0px 30px; @include font-size(45); font-family: $font_3; position: relative; color: $theme_blue;
+	span{
+		padding: 0px 30px; display: inline-block; letter-spacing: 4px; text-transform: uppercase; 
+	}
+	&:before{
+		 content: "<title>";
+	}
+	&:after{
+		 content: "</title>";
+	} 
 }
 
 // About me
-.about {
-  p {
-    @include font-size(16);
-    margin-bottom: 15px;
-  }
-  .name {
-    line-height: 1;
-    margin-bottom: 45px;
-    span {
-      font-family: $font_1;
-      @include font-size(48);
-      color: $theme_blue;
-      vertical-align: middle;
-      line-height: 0.8;
-    }
-    .dev {
-      font-family: $font_content;
-      display: block;
-      letter-spacing: 5px;
-      @include font-size(12);
-      color: $white;
-      line-height: 1;
-    }
-  }
+.about{
+	p{
+		@include font-size(16); margin-bottom: 15px;
+	}
+	.name{
+		line-height: 1; margin-bottom: 45px;
+		span{
+			font-family: $font_1; @include font-size(48); color: $theme_blue; vertical-align: middle; line-height: 0.8;
+		}
+		.dev{
+			font-family: $font_content; display: block; letter-spacing: 5px; @include font-size(12); color: $white; line-height: 1;
+		}
+	} 
 }
-.about-me {
-  &:before,
-  &:after {
-    margin: 10px 0px;
+.about-me{
+	&:before, &:after{
+		margin: 10px 0px;
     font-size: 32px;
     font-family: "Raleway Dots", cursive;
     position: relative;
     color: #00bcd4;
-  }
-  &:before {
-    content: "<about me>";
-  }
-  &:after {
-    content: "</about me>";
-  }
-  p {
-    padding-left: 5%;
-  }
+	}
+	&:before{
+		content: '<about me>';
+	}
+	&:after{
+		content: '</about me>';
+	}
+	p{
+		padding-left: 5%;
+	}
 }
+
 
 // experience
-.experience-wrapper {
-  ul {
-    padding: 0;
-    li {
-      margin-bottom: 20px;
-      .experience-content-wrapper {
-        background: $d_black;
-        padding: 20px 15px;
-        height: 100%;
-      }
-    }
-    p {
-      line-height: 1;
-      font-size: 16px;
-    }
-
-    .job-title {
-      @include font-size(24);
-      font-family: $font_1;
-      color: $theme_blue;
-      letter-spacing: 3px;
-      font-weight: 800;
-      position: relative;
-      display: inline;
-      &:after {
-        content: "";
-        position: absolute;
-        width: 80px;
-        height: 1px;
-        background: $theme_blue;
-        bottom: 5px;
-        right: -20px;
-      }
-    }
-    .company {
-      margin-top: 25px;
-      @include font-size(14);
-      font-family: $font_content;
-      line-height: 1.2;
-    }
-    .experience {
-      color: $d_grey;
-      @include font-size(12);
-    }
-  }
+.experience-wrapper{
+	ul{
+		padding: 0;
+		li{
+			margin-bottom: 20px;
+			.experience-content-wrapper{background: $d_black; padding: 20px 15px; height: 100%;}
+		}
+		p{
+			line-height: 1; font-size: 16px;
+		}
+		
+		.job-title{
+			@include font-size(24); font-family: $font_1;color: $theme_blue; letter-spacing: 3px; font-weight: 800; position: relative; display: inline;
+			&:after{
+				content: ""; position: absolute; width: 80px; height: 1px; background: $theme_blue; bottom: 5px; right: -20px;
+			}
+		}
+		.company{
+			 margin-top: 25px;
+			@include font-size(14); font-family: $font_content; line-height: 1.2;
+		}
+		.experience{
+			color: $d_grey;@include font-size(12);
+		}
+	}
 }
+
 
 // Skills
-.skill-bar {
-  .skill {
-    background: $d_black;
-    width: 100%;
-    height: 40px;
-    margin: 0px 0px 15px;
-    position: relative; //transform :rotate(-90deg) translate(-140px);
-    .progress-bar {
-      height: inherit;
-      width: inherit;
-      display: block;
-      background: $theme_blue;
-      padding: 0px 10px;
-      line-height: 40px;
-    }
-    .skill-name {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      top: 0;
-      left: 0;
-      line-height: 40px;
-      padding: 0px 10px;
-      letter-spacing: 3px;
-      @include font-size(22);
-    }
-    .skill-value {
-      position: absolute;
-      right: 0;
-      top: 0;
-      line-height: 40px;
-      padding: 0px 10px;
-    }
-  }
-  #skill-html {
-    background: #de4b25;
-  }
-  #skill-css {
-    background: #146fb1;
-  }
-  #skill-js {
-    background: #e3c431;
-    & ~ .skill-name {
-      color: #000;
-    }
-  }
-  #skill-jquery {
-    background: #1169ae;
-  }
-  #skill-ng {
-    background: #dd0031;
-  }
-  #skill-ng2 {
-    background: #c3002f;
-  }
+.skill-bar{
+	.skill{
+		background: $d_black; width: 100%; height: 40px; margin: 0px 0px 15px; position: relative; //transform :rotate(-90deg) translate(-140px);
+		.progress-bar{
+			height: inherit; width: inherit; display: block; background: $theme_blue; padding: 0px 10px; line-height: 40px;
+		}
+		.skill-name{
+			position: absolute;right: 0; bottom: 0; top: 0; left: 0; line-height: 40px; padding: 0px 10px; letter-spacing: 3px; @include font-size(22); 
+		}
+		.skill-value{
+			position: absolute; right: 0; top: 0; line-height: 40px; padding: 0px 10px;
+		}
+	}
+	#skill-html{
+			background: #de4b25;
+	}
+	#skill-css{
+		background: #146fb1;
+	}
+	#skill-js{
+		background: #e3c431;
+		&~.skill-name{ color: #000;}
+	}
+	#skill-jquery{
+		background: #1169ae;
+	}
+	#skill-ng{
+		background: #dd0031;
+	}
+	#skill-ng2{
+		background: #c3002f;
+	}
 }
-.skill-img {
-  position: relative;
-  width: 50%;
-  float: left;
-  img {
-    max-width: 100px;
-    height: auto;
-    position: absolute;
-  }
+.skill-img{
+	position: relative; width: 50%; float: left; 
+	img{
+	  max-width: 100px;
+	  height: auto;
+	  position: absolute;
+	}
 }
-.quote {
-  span {
-    font-family: $font_1;
-    @include font-size(48);
-    color: $theme_blue;
-    vertical-align: middle;
-  }
+.quote{
+	span{
+		font-family: $font_1; @include font-size(48); color: $theme_blue; vertical-align: middle;
+	}
 }
 // hire
-.download-resume {
-  @include font-size(28);
-  text-align: center;
-  margin: 35px auto 20px;
-  display: block;
-  max-width: 380px;
+.download-resume{
+	@include font-size(28); text-align: center; margin: 35px auto 20px; display: block; max-width: 380px;
 }
-footer {
-  margin: 15px 0px;
-  text-align: center;
-  padding: 20px 0px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  .social-links {
-    max-width: 450px;
-    margin: 0 auto;
-    text-align: center;
-    a {
-      margin: 0px 15px;
-      color: $white;
-      position: relative;
-      z-index: 1;
-      &:before {
-        @include font-size(30);
-      }
-      &:hover {
-        color: $theme_blue;
-      }
-    }
-  }
-  .shadow {
-    box-shadow: 0px -5px 6px -4px #00bcd4;
+footer{
+	margin: 15px 0px; text-align: center; padding: 20px 0px; position: absolute; bottom: 0; left: 0; right: 0;
+	.social-links{
+		max-width: 450px; margin: 0 auto; text-align: center;
+		a{
+			 margin: 0px 15px; color: $white; position: relative; z-index: 1;
+			&:before{
+				@include font-size(30);
+			}
+			&:hover{
+				color: $theme_blue;
+			}
+		}
+	}
+	.shadow{
+		box-shadow: 0px -5px 6px -4px #00bcd4;
     display: block;
     max-width: 350px;
     margin: 0px auto 0px;
@@ -304,108 +192,74 @@ footer {
     z-index: 2;
     background: #000;
     min-height: 20px;
-  }
+	}
 }
 
-#fp-nav ul li a span,
-.fp-slidesNav ul li a span {
-  background: $theme_blue;
+#fp-nav ul li a span, .fp-slidesNav ul li a span{
+	background: $theme_blue;
 }
 /* Media Query */
-@media screen and (min-width: 1024px) {
-  .center-content {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-}
-@media screen and (max-width: 991px) {
-	html, body{
-		overflow: auto;
+@media screen and (min-width: 1024px){
+	.center-content{
+		max-width: 900px; margin: 0 auto;
 	}
-  .section-wrapper {
-    .section {
-      .content {
-        padding: 0px 25px;
-      }
-    }
-  }
-  .experience-wrapper {
-    ul {
-      .job-title {
-        @include font-size(23);
-      }
-    }
-  }
-  .skill-bar {
-    width: 100%;
-  }
-
-  /* width */
-  ::-webkit-scrollbar {
-    width: 20px !important;
-    -webkit-appearance: none !important;
-    -webkit-transform: translate3d(0, 0, 0) !important;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey !important;
-    border-radius: 10px !important;
-    background: grey !important;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(32, 0, 175) !important;
-    border-radius: 10px !important;
-  }
+}
+@media screen and (max-width: 991px){
+	.section-wrapper{		
+		.section{
+			.content{
+				padding: 0px 25px;
+			}
+		}
+	} 
+	.experience-wrapper{
+		ul{	
+			.job-title{
+				@include font-size(23);
+			}
+		}
+	} 
+	.skill-bar{
+		width: 100%;
+	}
 }
 
-@media screen and (max-width: 414px) {
-  #fp-nav {
-    bottom: 0;
-    right: 0 !important;
-    left: 0;
-    top: auto;
-    background: $theme_black;
-    text-align: center;
-    ul {
-      li {
-        display: inline-block;
-      }
-    }
-  }
-  .section-title {
-    @include font-size(20);
-  }
-  .skill-bar {
-    .skill {
-      .skill-name {
-        @include font-size(12);
-      }
-    }
-  }
-  .quote {
-    span {
-      @include font-size(24);
-      display: block;
-    }
-  }
-  .download-resume {
-    @include font-size(13);
-  }
-  footer {
-    position: relative;
-    bottom: unset;
-    left: unset;
-    right: unset;
-    .social-links {
-      a {
-        margin: 0px 8px;
-        &:before {
-          @include font-size(16);
-        }
-      }
-    }
-  }
+@media screen and (max-width: 414px){
+	#fp-nav{
+		bottom: 0; right: 0 !important; left: 0; top: auto; background: $theme_black; text-align: center;
+		ul{
+			li{
+				display: inline-block;
+			}
+		}
+	}
+	.section-title{
+		@include font-size(20);
+	}
+	.skill-bar{		
+		.skill{
+	 		.skill-name{
+	 			@include font-size(12);
+	 		}
+		}
+	}
+	.quote{
+		span{
+			@include font-size(24); display: block;
+		}
+	} 
+	.download-resume{
+		@include font-size(13);
+	}
+	footer{
+		position: relative; bottom: unset; left: unset; right: unset;
+		.social-links{
+			a{			
+				margin: 0px 8px;
+				&:before{
+					@include font-size(16);
+				}
+			}
+		}
+	}
 }
